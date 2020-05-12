@@ -19,7 +19,7 @@ function(data, grp, dataTag, method=c("mixed", "raw", "residual", "SVA"), plot=F
   dataTag=dataTag[iiuse,,drop=F]
   for (i in 1:ncol(dataTag)) {
     
-    genes=rownames(dataTag)[(which(dataTag[,i]>0))]
+    genes=rownames(dataTag)[(which(dataTag[,i]!=0))]
     
     
     if (method=="residual"){
